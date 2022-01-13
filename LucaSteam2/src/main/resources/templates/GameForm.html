@@ -14,24 +14,28 @@
 		<div align="center">
 			<h2>GAMES FORM</h2>
 
-			<form method="post">
-				<input id="id" type="hidden" />
+			<form method="post" th:object="${game}" th:action="@{/save}">
+				<input id="id" type="hidden" th:field="*{id}" />
 				<table>
 					<tr>
-						<td><label for="username">Name:</label></td>
-						<td><input type="text" /></td>
+						<td><label for="name">Name:</label></td>
+						<td><input type="text" th:field="*{name}" /></td>
 					</tr>
 					<tr>
-						<td><label for="email">Year:</label></td>
-						<td><input type="date" /></td>
+						<td><label for="year">Year:</label></td>
+						<td><input type="date" th:field="*{year}" /></td>
 					</tr>
 					<tr>
-						<td><label for="email">Publisher:</label></td>
-						<td><input type="text" /></td>
+						<td><label for="publisher">Publisher:</label></td>
+						<td><input type="text" th:field="*{publisher}" /></td>
 					</tr>
 					<tr>
-						<td><label for="password">Platform:</label></td>
-						<td><input type="password" /></td>
+						<td><label for="genre">Genre:</label></td>
+						<td><input type="text" th:field="*{genre}" /></td>
+					</tr>
+					<tr>
+						<td><label for="platform">Platform:</label></td>
+						<td><input type="text" th:field="*{platform}" /></td>
 					</tr>
 					<tr>
 						<td colspan="2" align="center"><input type="submit"
