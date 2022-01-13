@@ -23,4 +23,30 @@ public class GameController {
 		   model.addAttribute("game", game);
 		   return "GameForm";
 	   }
+	   
+	// Editar juego
+		@GetMapping("/edit")
+		public String editGame(@RequestParam("id") int id, Model m) {
+			// Cuidado porque puede ser nulo. Debo decidir que hacer
+			m.addAttribute("game", service.findById(id));
+			return "GameForm";
+		}
+
+		// Listar juegos
+		@GetMapping("/")
+		public String listGames(Model m) {
+			m.addAttribute("gameList", service.findAll());
+
+			// Para que veas que funciona un método hecho a medida
+			// m.addAttribute("userList", service.findByUsername("Antonio"));
+			return "GameList";
+		}
+		
+		//Eliminar juego
+		@GetMapping("/delete")
+		public String deleteGame(@RequestParam("id") int id) {
+			service.deleteById(id);
+			return("redirect:/");
+		}
+
 }
