@@ -1,11 +1,14 @@
 package com.example.LucaSteam2.service;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.LucaSteam2.model.Game;
 import com.example.LucaSteam2.repository.GameDao;
 
-public class GameServiceImpl {
+public class GameServiceImpl implements GameService{
 
 	@Autowired
 	GameDao gameDAO;
@@ -19,18 +22,18 @@ public class GameServiceImpl {
 	@Override
 	public Optional<Game> findById(int id) {
 
-		return gameDao.findById(id);
+		return gameDAO.findById(id);
 	}
 
 	// Encontrar todos los juegos
 	@Override
 	public List<Game> findAll() {
-		return gameDao.findAll();
+		return gameDAO.findAll();
 	};
 
 	// Eliminar por id
 
 	public void deleteById(int id) {
-		gameDao.deleteById(id);
+		gameDAO.deleteById(id);
 	}
 }
