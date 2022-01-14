@@ -20,5 +20,8 @@ public interface GameService {
 	
 	// for update and delete
 	public void save(Game game);
+	
+	//lista todos los juegos de nintendo
+	public List<Game> findAllNintendo();
 
 }
