@@ -24,19 +24,20 @@
 					</tr>
 					<tr>
 						<td><label for="year">Year:</label></td>
-						<td><input type="date" th:field="*{year}" /></td>
+						<td><input type="text" pattern="YYYY" required
+						 maxlength="4" placeholder="Año como YYYY" th:field="*{year}" /></td>
 					</tr>
 					<tr>
 						<td><label for="publisher">Publisher:</label></td>
-						<td><input type="text" th:field="*{publisher}" /></td>
+						<td><input type="text" placeholder="Ej: Nintendo" th:field="*{publisher}" /></td>
 					</tr>
 					<tr>
 						<td><label for="genre">Genre:</label></td>
-						<td><input type="text" th:field="*{genre}" /></td>
+						<td><input type="text" placeholder="Ej: Action" th:field="*{genre}" /></td>
 					</tr>
 					<tr>
 						<td><label for="platform">Platform:</label></td>
-						<td><input type="text" th:field="*{platform}" /></td>
+						<td><input type="text" placeholder="Ej: PS4" th:field="*{platform}" /></td>
 					</tr>
 					<tr>
 						<td colspan="2" align="center"><input type="submit"
