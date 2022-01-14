@@ -37,4 +37,13 @@ public class GameServiceImpl implements GameService{
 	public void deleteById(int id) {
 		gameDAO.deleteById(id);
 	}
+
+	
+	//Encontrar juegos por año
+	@Override
+	public List<Game> yearList(String year) {
+		
+		return gameDAO.findByYear(year);
+	}
+
 }

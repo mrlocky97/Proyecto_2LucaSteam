@@ -53,5 +53,14 @@ public class GameController {
 			service.deleteById(id);
 			return("redirect:/");
 		}
+		
+		//Encontrar por año
+		@GetMapping("/listyear")
+		public String yearList(@RequestParam("year") String year, Model m) {
+			
+			m.addAttribute("gameList", service.yearList(year));
+			
+			return "GameList";
+		}
 
 }

@@ -21,4 +21,7 @@ public interface GameService {
 	// for update and delete
 	public void save(Game game);
 
+	//Encontrar Game por año
+	
+	public List<Game> yearList(String year);
 }
