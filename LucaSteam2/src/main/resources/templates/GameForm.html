@@ -23,9 +23,10 @@
 						<td><input type="text" th:field="*{name}" /></td>
 					</tr>
 					<tr>
-						<td><label for="year">Year:</label></td>
-						<td><input type="date" th:field="*{year}" /></td>
-					</tr>
+                        <td><label for="year">Year:</label></td>
+                        <td><input type="number" pattern="YYYY" required
+                         maxlength="4" placeholder="Año como YYYY" th:field="*{year}" /></td>
+                    </tr>
 					<tr>
 						<td><label for="publisher">Publisher:</label></td>
 						<td><input type="text" th:field="*{publisher}" /></td>
