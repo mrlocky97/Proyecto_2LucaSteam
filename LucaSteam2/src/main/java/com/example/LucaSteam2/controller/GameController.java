@@ -53,5 +53,11 @@ public class GameController {
 			service.deleteById(id);
 			return("redirect:/");
 		}
+		
+		@GetMapping("/findByNintendo")
+		public String nintendoList(Model model) {
+			model.addAttribute("gameList", service.findAllNintendo());
+			return("GameList");
+		}
 
 }
