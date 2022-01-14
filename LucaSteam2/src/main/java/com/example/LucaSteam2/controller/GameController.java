@@ -62,5 +62,13 @@ public class GameController {
 			
 			return "GameList";
 		}
+		
+		//Encontrar por género
+		@GetMapping("/listgenre")
+		public String listByGenre(@RequestParam("genre") String genre, Model m) {
+			m.addAttribute("gameList", service.listByGenre(genre));
+			return "GameList";
+		}
+		
 
 }

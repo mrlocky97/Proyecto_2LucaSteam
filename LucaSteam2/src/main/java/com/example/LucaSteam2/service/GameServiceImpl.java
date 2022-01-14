@@ -46,4 +46,11 @@ public class GameServiceImpl implements GameService{
 		return gameDAO.findByYear(year);
 	}
 
+	//Encontrar juegos por género
+	@Override
+	public List<Game> listByGenre(String genre) {
+		
+		return gameDAO.findByGenre(genre);
+	}
+
 }
