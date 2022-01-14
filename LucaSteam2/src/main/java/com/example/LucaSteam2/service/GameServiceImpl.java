@@ -4,10 +4,11 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.LucaSteam2.model.Game;
 import com.example.LucaSteam2.repository.GameDao;
-
+@Service
 public class GameServiceImpl implements GameService{
 
 	@Autowired
