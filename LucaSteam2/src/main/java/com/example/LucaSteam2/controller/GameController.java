@@ -41,9 +41,6 @@ public class GameController {
 		@GetMapping("/")
 		public String listGames(Model m) {
 			m.addAttribute("gameList", service.findAll());
-
-			// Para que veas que funciona un método hecho a medida
-			// m.addAttribute("userList", service.findByUsername("Antonio"));
 			return "GameList";
 		}
 		
