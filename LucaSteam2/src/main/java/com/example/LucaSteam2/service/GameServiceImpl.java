@@ -37,4 +37,10 @@ public class GameServiceImpl implements GameService{
 	public void deleteById(int id) {
 		gameDAO.deleteById(id);
 	}
+
+	@Override
+	public List<Game> findAllNintendo() {
+		// TODO Auto-generated method stub
+		return gameDAO.findByPublisher("Nintendo");
+	}
 }
