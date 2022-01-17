@@ -37,10 +37,25 @@ public class GameServiceImpl implements GameService{
 	public void deleteById(int id) {
 		gameDAO.deleteById(id);
 	}
+	
+	//Encontrar juegos por año
+	@Override
+	public List<Game> yearList(String year) {
+		
+		return gameDAO.findByYear(year);
+	}
+
+	//Encontrar juegos por género
+	@Override
+	public List<Game> listByGenre(String genre) {
+		
+		return gameDAO.findByGenre(genre);
+	}
 
 	@Override
 	public List<Game> findAllNintendo() {
 		// TODO Auto-generated method stub
 		return gameDAO.findByPublisher("Nintendo");
 	}
+
 }

@@ -24,4 +24,11 @@ public interface GameService {
 	//lista todos los juegos de nintendo
 	public List<Game> findAllNintendo();
 
+	//Encontrar Game por año
+	
+	public List<Game> yearList(String year);
+	
+	//Encontrar Game por género
+	
+	public List<Game> listByGenre(String genre);
 }
