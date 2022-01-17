@@ -6,40 +6,41 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Game form</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/GameFormStyles.css}"/>
 </head>
 
 <body>
-	<div class="container">
-		<h1>Games </h1>
-		<h2>Rellene los campos</h2>
-		<div align="center">
-			<h2>GAMES FORM</h2>
+	<div class="maincontainer">
+		<h1 class="tittle">Games </h1>
+		<h2 class = "subtittle">Rellene los campos</h2>
+		<div class="container" align="center">
+			<h2 class="subsubtittle">GAMES FORM</h2>
 
-			<form method="post" th:object="${game}" th:action="@{/save}">
+			<form class="formulary" method="post" th:object="${game}" th:action="@{/save}">
 				<input id="id" type="hidden" th:field="*{id}" />
-				<table>
-					<tr>
+				<table class="tabletablestriped">
+					<tr class="odd">
 						<td><label for="name">Name:</label></td>
 						<td><input type="text" th:field="*{name}" /></td>
 					</tr>
-					<tr>
+					<tr class="even">
                         <td><label for="year">Year:</label></td>
                         <td><input type="number" pattern="YYYY" required
                          maxlength="4" placeholder="Año como YYYY" th:field="*{year}" /></td>
                     </tr>
-					<tr>
+					<tr class="odd">
 						<td><label for="publisher">Publisher:</label></td>
 						<td><input type="text" th:field="*{publisher}" /></td>
 					</tr>
-					<tr>
+					<tr class="even">
 						<td><label for="genre">Genre:</label></td>
 						<td><input type="text" th:field="*{genre}" /></td>
 					</tr>
-					<tr>
+					<tr class="odd">
 						<td><label for="platform">Platform:</label></td>
 						<td><input type="text" th:field="*{platform}" /></td>
 					</tr>
-					<tr>
+					<tr class="even">
 						<td colspan="2" align="center"><input type="submit"
 							value="Save Game"></td>
 					</tr>

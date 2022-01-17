@@ -6,22 +6,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Game list</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/GameListStyles.css}"/>
 </head>
 
 <body>
 	<div class="container">
 
-		<h1>
+		<h1 class="tittle">
 			Game list<br />
 		</h1>
 
-		<h2>List of games</h2>
+		<h2 class="subtittle">List of games</h2>
 		<p>User table data</p>
 		<p>
 			<a href="/newGame" class="btn btn-primary">New game</a>
 		</p>
 		<table class="table table-striped">
-			<tr>
+			<tr class="odd">
 				<th>Name</th>
 				<th>Year</th>
 				<th>Publisher</th>
@@ -32,8 +33,9 @@
 				<th>Japan Sales</th>
 				<th>Other Sales</th>
 				<th>Global Sales</th>
+				<th>Total Sum Sales</th>
 			</tr>
-			<tr th:each="game, status : ${gameList}">
+			<tr class="even" th:each="game, status : ${gameList}">
 				<td th:text="${status.index + 1}"></td>
 				<td th:text="${game.name}"></td>
 				<td th:text="${game.year}"></td>
@@ -45,8 +47,8 @@
 				<td th:text="${game.jp_sales}"></td>
 				<td th:text="${game.other_sales}"></td>
 				<td th:text="${game.global_sales}"></td>
-				<td><a th:href="@{/edit(id=${game.id})}">Edit</a> | <a
-					th:href="@{/delete(id=${game.id})}">Delete</a></td>
+				<td class="botone"><a th:href="@{/edit(id=${game.id})}">Edit</a></td> 
+				<td class="botone"><a th:href="@{/delete(id=${game.id})}">Delete</a></td>
 			</tr>
 
 		</table>
