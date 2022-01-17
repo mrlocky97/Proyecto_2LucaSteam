@@ -70,5 +70,11 @@ public class GameController {
 			return "GameList";
 		}
 		
+    //Encontrar lista por nintendo
+		@GetMapping("/findByNintendo")
+		public String nintendoList(Model model) {
+			model.addAttribute("gameList", service.findAllNintendo());
+			return("GameList");
+		}
 
 }
