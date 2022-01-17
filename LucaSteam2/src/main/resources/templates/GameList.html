@@ -6,7 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Game list</title>
-<link rel="stylesheet" type="text/css" th:href="GameFormList.css" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/GameListStyles.css}" />
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -15,34 +16,34 @@
 </head>
 
 <body>
+	<div class="container-xxl">
+		<img id="img" src="./game2.png" alt="Image game">
+	</div>
 	<div class="container">
 		<h1 class="tittle">
-			Game list<br />
-			<div class="col" >
+			Game list<br/>
+			<div class="col">
 				<h5 class="center">Filtros</h5>
-				<div class="row">
-					<form th:action="@{/findByNintendo}" th:object="${game}"
+				<div>
+					<form class="formulario" th:action="@{/findByNintendo}" th:object="${game}"
 						method="GET">
-						<input class="btn btn-primary" type="submit"
-							value="Listar por nintendo">
+						 <button type="submit" id="btn1" class="btn btn-dark">Listar por nintendo</button>
 					</form>
 				</div>
-				<div >
-					<form th:action="@{/listgenre}" 
-						method="GET">
-						
-						<input name="genre" id="genre" type="text"  class="form-control"
+				<div>
+					<form class="formulario" th:action="@{/listgenre}" method="GET">
+
+						<input name="genre" id="genre" type="text" class="form-control"
 							placeholder="Listar por género"> <input
-							class="btn btn-primary" type="submit" value="Buscar">
+							class="btn btn-primary" id="btn2" type="submit" value="Buscar">
 					</form>
 				</div>
-				<div >
-					<form th:action="@{/listyear}" 
-						method="GET">
-						
-						<input name="year" id="year" type="number"  class="form-control"
+				<div>
+					<form class="formulario" th:action="@{/listyear}" method="GET">
+
+						<input name="year" id="year" type="number" class="form-control"
 							placeholder="Listar por año"> <input
-							class="btn btn-primary" type="submit" value="Buscar">
+							class="btn btn-primary" id="btn3" type="submit" value="Buscar">
 					</form>
 				</div>
 			</div>
@@ -50,7 +51,7 @@
 		<h3 class="subtittle">User table data</h3>
 		<a href="/newGame" class="btn btn-dar" id="newGame">New game</a>
 		<div class="row">
-			<div class="col" >
+			<div class="col">
 				<table class="table">
 					<thead>
 						<tr class="odd">
@@ -88,7 +89,7 @@
 					</tbody>
 				</table>
 			</div>
-			
+
 		</div>
 
 		<footer>
