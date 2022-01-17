@@ -1,0 +1,59 @@
+@charset "ISO-8859-1";
+
+body{
+    background-color: yellow;
+}
+
+.container{
+    background-color:rgb(186, 238, 144);
+}
+
+.tittle{
+    color:rgb(255, 0, 170);
+    text-align: center;
+    font-size: 60px;
+}
+
+.subtittle{
+    color:blue;
+    text-align: center;
+    font-size: 40px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #000;
+ }
+ th, td {
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;
+    caption-side: bottom;
+    color: black;
+ }
+
+.odd{
+    color:red;
+    font-family: arial;
+    padding: 5px;
+}
+
+.even{
+    color:lightgray;
+    font-family: arial;
+    padding: 5px;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    color: green;
+    font-size: 30px;
+    text-align:center;
+}
+
+.botone{
+    color:black;
+}
