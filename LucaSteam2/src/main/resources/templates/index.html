@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <title>Juegos BBDD</title>
+    
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container-xxl">
+        <img id="img" src="game2.png" alt="Image game">
+    </div>
+
+    <div class="container-xxl" id="gridPrincipal">
+        <h1 class="center">Plataforma de juegos</h1>
+        <h3 id="subTitle">Seleccione una de las opciones disponibles</h3>
+
+        <ul class="container-sm">
+            <li class="list-group-item list-group-item-action"><a class="a" href="/newGame">1- Juego nuevo</a></li>
+            <li class="list-group-item list-group-item-action"><a class="a" href="/list">2- Listar todos los juegos
+                    disponibles</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
