@@ -51,6 +51,23 @@ public class GameController {
 			return("redirect:/");
 		}
 		
+		//Encontrar por año
+		@GetMapping("/listyear")
+		public String yearList(@RequestParam("year") String year, Model m) {
+			
+			m.addAttribute("gameList", service.yearList(year));
+			
+			return "GameList";
+		}
+		
+		//Encontrar por género
+		@GetMapping("/listgenre")
+		public String listByGenre(@RequestParam("genre") String genre, Model m) {
+			m.addAttribute("gameList", service.listByGenre(genre));
+			return "GameList";
+		}
+		
+    //Encontrar lista por nintendo
 		@GetMapping("/findByNintendo")
 		public String nintendoList(Model model) {
 			model.addAttribute("gameList", service.findAllNintendo());
