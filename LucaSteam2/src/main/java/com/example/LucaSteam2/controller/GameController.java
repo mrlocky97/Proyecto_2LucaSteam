@@ -71,6 +71,7 @@ public class GameController {
 	// Encontrar por género
 	@GetMapping("/listgenre")
 	public String listByGenre(@RequestParam("genre") String genre, Model m) {
+		System.out.println("------" + genre);
 		m.addAttribute("gameList", service.listByGenre(genre));
 		return "GameList";
 	}
