@@ -1,17 +1,15 @@
 package com.example.LucaSteam2;
 
 import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import java.util.List;
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.stubbing.OngoingStubbing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -20,35 +18,27 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import com.example.LucaSteam2.controller.GameController;
 import com.example.LucaSteam2.model.Game;
-import com.example.LucaSteam2.service.GameService;
+
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(GameController.class)
-
-public class LucaSteam2ApplicationTests2 {
+public class LucaSteam2ApplicationTests3 {
 
 	@Autowired
 	private MockMvc mockMvc;
 	
 	@MockBean
-	GameService serv;
-	
+	GameController contr;
 	
 	@Test
-	void contextLoads5() throws Exception {
-		mockMvc.perform(get("/test_hello"))
-				.andDo(print())
-				.andExpect(status().isOk())
-				.andExpect(content().string(containsString("Hola Mundo")));
-	}
-
-	@Test
-	void contextLoads6 () throws Exception {
-		mockMvc.perform(get("/css/GameFormStyles.css"))
-				.andDo(print())
-				.andExpect(status().isOk());
-	
-			
+	void contextLead7() throws Exception {
+		when(contr.helloWorld()).thenReturn("Correct");
+		
+		mockMvc
+			.perform(get("/test_hello"))
+			.andDo(print())
+			.andExpect(status().isOk())
+			.andExpectAll(content().string(containsString("Correct")));
 	}
 	
 }
