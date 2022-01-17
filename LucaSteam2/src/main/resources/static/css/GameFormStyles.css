@@ -1,0 +1,70 @@
+@charset "ISO-8859-1";
+
+body{
+    background-color: mediumorchid;
+}
+
+.maincontainer{
+    background-color: lightgreen;
+}
+
+.container{
+    background-color: green;
+}
+
+.tittle{
+    color:red;
+    text-align: center;
+    font-size: 60px;
+}
+
+.subtittle{
+    color:blue;
+    text-align: center;
+    font-size: 40px;
+}
+
+.subsubtittle{
+    color:lightblue;
+    text-align: center;
+    font-size: 30px;
+}
+
+.formulary{
+    background-color: rgb(224, 255, 233);
+}
+
+table {
+    width: 100%;
+    border: 1px solid #000;
+ }
+ th, td {
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+    color: black;
+ }
+
+.odd{
+    color:magenta;
+    font-family: arial;
+    padding: 5px;
+}
+
+.even{
+    color: magenta;
+    font-family: arial;
+    padding: 5px;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    color: green;
+    font-size: 30px;
+    text-align:center;
+}
+
+input{
+    background-color: yellowgreen;
+}
