@@ -11,9 +11,11 @@ import com.example.LucaSteam2.model.Game;
 @Repository
 public interface GameDao extends JpaRepository<Game, Integer> {
 
-	List <Game> findByPublisher(String namePublisher);
+	List <Game> findFirst50ByPublisher(String namePublisher);
 	
-	List <Game> findByGenre(String genre);
+	List <Game> findFirst50ByGenre(String genre);
 	
-	List <Game> findByYear(String year);
+	List <Game> findFirst50ByYear(String year);
+	
+	List <Game> findByIdBetween(int n,int n2);
 }

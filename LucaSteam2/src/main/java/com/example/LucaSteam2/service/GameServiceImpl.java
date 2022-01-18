@@ -29,7 +29,7 @@ public class GameServiceImpl implements GameService{
 	// Encontrar todos los juegos
 	@Override
 	public List<Game> findAll() {
-		return gameDAO.findAll();
+		return gameDAO.findByIdBetween(1, 50);
 	};
 
 	// Eliminar por id
@@ -42,20 +42,20 @@ public class GameServiceImpl implements GameService{
 	@Override
 	public List<Game> yearList(String year) {
 		
-		return gameDAO.findByYear(year);
+		return gameDAO.findFirst50ByYear(year);
 	}
 
 	//Encontrar juegos por género
 	@Override
 	public List<Game> listByGenre(String genre) {
 		
-		return gameDAO.findByGenre(genre);
+		return gameDAO.findFirst50ByGenre(genre);
 	}
 
 	@Override
 	public List<Game> findAllNintendo() {
 		// TODO Auto-generated method stub
-		return gameDAO.findByPublisher("Nintendo");
+		return gameDAO.findFirst50ByPublisher("Nintendo");
 	}
 
 }
